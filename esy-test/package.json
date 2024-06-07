@@ -1,0 +1,11 @@
+{
+  "esy": {
+    "build": [
+      "#{os == 'windows' ? 'x86_64-w64-mingw32-':''}gcc example.c -I#{esy-libpng.install / 'include'} -L#{esy-libpng.lib} -lpng -o test",
+      "./test"
+    ]
+  },
+  "dependencies": {
+    "esy-libpng": "*"
+  }
+}
