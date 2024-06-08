@@ -5,7 +5,7 @@
   "source": "https://downloads.sourceforge.net/project/libpng/libpng16/1.6.43/libpng-1.6.43.tar.xz#sha256:6a5ca0652392a2d7c9db2ae5b40210843c0bbc081cbd410825ab00cc59f14a6c",
   "override": {
     "build": [
-      "./configure #{os == 'windows' ? '--host=x86_64-w64-mingw32' : ''} #{os == 'darwin' ? '--disable-dependency-tracking': ''} --disable-silent-rules --prefix=#{self.install}",
+      "./configure CPPFLAGS=#{$CFLAGS} LDFLAGS='#{$LDFLAGS}' #{os == 'windows' ? '--host=x86_64-w64-mingw32' : ''} #{os == 'darwin' ? '--disable-dependency-tracking': ''} --disable-silent-rules --prefix=#{self.install}",
       "make -j#{self.jobs}"
     ],
     "install": "make install",
