@@ -1,6 +1,6 @@
 {
   "name": "esy-libpng",
-  "version": "1.6.4300",
+  "version": "1.6.43000",
   "description": "libpng packaged for esy",
   "source": "https://downloads.sourceforge.net/project/libpng/libpng16/1.6.43/libpng-1.6.43.tar.xz#sha256:6a5ca0652392a2d7c9db2ae5b40210843c0bbc081cbd410825ab00cc59f14a6c",
   "override": {
